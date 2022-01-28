@@ -2501,6 +2501,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 7531512617640401471, guid: c6e1708043e37fe4a818608522dd28bf, type: 3}
   playerBattleStation: {fileID: 1484454790}
   enemyBattleStation: {fileID: 1001884880}
+  dialogText: {fileID: 2046290235}
   state: 0
 --- !u!1 &1603827742
 GameObject:
@@ -2877,7 +2878,7 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Insert dialogue here...
