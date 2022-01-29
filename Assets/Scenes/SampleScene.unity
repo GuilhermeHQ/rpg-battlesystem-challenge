@@ -1687,7 +1687,7 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Name
@@ -2038,7 +2038,7 @@ MonoBehaviour:
     m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Lvl 0
@@ -2502,6 +2502,8 @@ MonoBehaviour:
   playerBattleStation: {fileID: 1484454790}
   enemyBattleStation: {fileID: 1001884880}
   dialogText: {fileID: 2046290235}
+  playerHUD: {fileID: 1603827746}
+  enemyHUD: {fileID: 1738996518}
   state: 0
 --- !u!1 &1603827742
 GameObject:
@@ -2514,6 +2516,7 @@ GameObject:
   - component: {fileID: 1603827743}
   - component: {fileID: 1603827745}
   - component: {fileID: 1603827744}
+  - component: {fileID: 1603827746}
   m_Layer: 5
   m_Name: PlayerBattleHud
   m_TagString: Untagged
@@ -2581,6 +2584,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603827742}
   m_CullTransparentMesh: 1
+--- !u!114 &1603827746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603827742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 707cb8750fa5da74c9c3aa4add1680a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 964789602}
+  levelText: {fileID: 1322555131}
+  hpSlider: {fileID: 1439643916}
 --- !u!1 &1738996514
 GameObject:
   m_ObjectHideFlags: 0
@@ -2592,6 +2610,7 @@ GameObject:
   - component: {fileID: 1738996515}
   - component: {fileID: 1738996517}
   - component: {fileID: 1738996516}
+  - component: {fileID: 1738996518}
   m_Layer: 5
   m_Name: EnemyBattleHud
   m_TagString: Untagged
@@ -2659,6 +2678,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738996514}
   m_CullTransparentMesh: 1
+--- !u!114 &1738996518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738996514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 707cb8750fa5da74c9c3aa4add1680a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 585077017}
+  levelText: {fileID: 1322774221}
+  hpSlider: {fileID: 532989078}
 --- !u!1 &1830254351
 GameObject:
   m_ObjectHideFlags: 0

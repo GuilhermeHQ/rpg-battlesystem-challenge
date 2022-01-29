@@ -11,6 +11,4 @@ public class unit : MonoBehaviour
 
     public int maxHP;
     public int currentHP;
-
-
 }
