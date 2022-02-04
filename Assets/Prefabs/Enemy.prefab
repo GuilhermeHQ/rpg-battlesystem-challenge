@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4269187464405871973}
   - component: {fileID: 1960342158249353932}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: eyebrow-right (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3162972499449922880}
   - component: {fileID: 1910251798666203016}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: left-arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7420107091382731686}
   - component: {fileID: 6191206472014913162}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8060891849979669090}
   - component: {fileID: 3424565040925677160}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: detail-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7022153743050621110}
   - component: {fileID: 8345951169144424655}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: left-leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,7 +431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8327279994543253305}
   - component: {fileID: 7446320441366318664}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: right-leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +513,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1594946556589200710}
   - component: {fileID: 7719287894438258642}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: eye-left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -595,7 +595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5421007403357209457}
   - component: {fileID: 7943886505685476479}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: eyebrow-right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -677,7 +677,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6491848170083500563}
   - component: {fileID: 1835374325716043762}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: detail-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -759,7 +759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 853233352623321970}
   - component: {fileID: 8842928002279733855}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -973,7 +973,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4438406257453374064}
   - component: {fileID: 8196238259840433230}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: eye-right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1055,7 +1055,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2436211852133948280}
   - component: {fileID: 1459049458526304029}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: right-arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
