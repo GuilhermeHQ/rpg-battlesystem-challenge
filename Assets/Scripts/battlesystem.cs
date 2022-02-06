@@ -9,6 +9,8 @@ public class battlesystem : MonoBehaviour
 {
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
+    public GameObject attackButton;
+    public GameObject healButton;
 
     [SerializeField] float timeToNextState = 2f;
     [SerializeField] float timeToNextTurn = 1f;
@@ -49,15 +51,19 @@ public class battlesystem : MonoBehaviour
 
         state = BattleState.PLAYERTURN;
         PlayerTurn();
+        attackButton.SetActive(true);
+        healButton.SetActive(true);
     }
 
     IEnumerator PlayerAttack()
-    {
+    {       
         bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
         enemyHUD.SetHP(enemyUnit.currentHP);
         dialogText.text = "You attacked!";
 
         state = BattleState.PLAYERACTION;
+        attackButton.SetActive(false);
+        healButton.SetActive(false);
 
         yield return new WaitForSeconds(timeToNextTurn);
 
@@ -95,6 +101,8 @@ public class battlesystem : MonoBehaviour
         {
             state = BattleState.PLAYERTURN;
             PlayerTurn();
+            attackButton.SetActive(true);
+            healButton.SetActive(true);
         }
 
     }
@@ -126,6 +134,8 @@ public class battlesystem : MonoBehaviour
         dialogText.text = "You feel renewed strength!";
 
         state = BattleState.PLAYERACTION;
+        attackButton.SetActive(false);
+        healButton.SetActive(false);
 
         yield return new WaitForSeconds(2f);
 

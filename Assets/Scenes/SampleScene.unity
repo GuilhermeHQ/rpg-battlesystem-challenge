@@ -1009,7 +1009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &262142577
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2969,7 +2969,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &772666759
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5607,6 +5607,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 742681277805088803, guid: 20c4db227bc6ffb479a4689318ab8621, type: 3}
   enemyPrefab: {fileID: 7531512617640401471, guid: c6e1708043e37fe4a818608522dd28bf, type: 3}
+  attackButton: {fileID: 772666758}
+  healButton: {fileID: 262142576}
   timeToNextState: 2
   timeToNextTurn: 1
   playerBattleStation: {fileID: 1484454790}
