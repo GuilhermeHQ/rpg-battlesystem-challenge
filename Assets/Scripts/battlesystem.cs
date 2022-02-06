@@ -59,7 +59,7 @@ public class battlesystem : MonoBehaviour
 
         yield return new WaitForSeconds(timeToNextTurn);
 
-        if(isDead)
+        if (isDead)
         {
             state = BattleState.WON;
             EndBattle();
@@ -69,6 +69,8 @@ public class battlesystem : MonoBehaviour
             state = BattleState.ENEMYTURN;
             StartCoroutine(EnemyTurn());
         }
+
+    }
 
         IEnumerator EnemyTurn()
         {
@@ -107,11 +109,24 @@ public class battlesystem : MonoBehaviour
             }
         }
 
-    }
+    
 
     void PlayerTurn()
     {
         dialogText.text = "Choose an action:";         
+    }
+
+    IEnumerator PlayerHeal()
+    {
+        playerUnit.Heal(5);
+
+        playerHUD.SetHP(playerUnit.currentHP);
+        dialogText.text = "You feel renewed strength!";
+
+        yield return new WaitForSeconds(2f);
+
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn());
     }
 
     public void OnAttackButton()
@@ -120,6 +135,16 @@ public class battlesystem : MonoBehaviour
             return;
 
         StartCoroutine (PlayerAttack());
+
+
+    }
+
+    public void OnHealButton()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+
+        StartCoroutine(PlayerHeal());
 
 
     }
