@@ -59,7 +59,7 @@ public class battlesystem : MonoBehaviour
     {       
         bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
         enemyHUD.SetHP(enemyUnit.currentHP);
-        dialogText.text = "You attacked!";
+         dialogText.text = "You attacked!";
 
         state = BattleState.PLAYERACTION;
         attackButton.SetActive(false);
@@ -137,7 +137,7 @@ public class battlesystem : MonoBehaviour
         attackButton.SetActive(false);
         healButton.SetActive(false);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(timeToNextTurn);
 
         state = BattleState.ENEMYTURN;
         StartCoroutine(EnemyTurn());

@@ -130,6 +130,7 @@ MonoBehaviour:
   unitName: Mad Furry
   unitLevel: 2
   damage: 10
+  heal: 5
   maxHP: 25
   currentHP: 20
 --- !u!1 &1728766242606170291
