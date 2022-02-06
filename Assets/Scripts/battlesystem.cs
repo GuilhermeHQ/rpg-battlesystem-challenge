@@ -1,9 +1,9 @@
- using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST } 
+public enum BattleState { START, PLAYERTURN, PLAYERACTION, ENEMYTURN, WON, LOST }
 
 public class battlesystem : MonoBehaviour
 {
@@ -57,6 +57,8 @@ public class battlesystem : MonoBehaviour
         enemyHUD.SetHP(enemyUnit.currentHP);
         dialogText.text = "You attacked!";
 
+        state = BattleState.PLAYERACTION;
+
         yield return new WaitForSeconds(timeToNextTurn);
 
         if (isDead)
@@ -72,48 +74,48 @@ public class battlesystem : MonoBehaviour
 
     }
 
-        IEnumerator EnemyTurn()
+    IEnumerator EnemyTurn()
+    {
+        dialogText.text = enemyUnit.unitName + " attacks!";
+
+        yield return new WaitForSeconds(timeToNextTurn);
+
+        bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
+
+        playerHUD.SetHP(playerUnit.currentHP);
+
+        yield return new WaitForSeconds(timeToNextTurn);
+
+        if (isDead)
         {
-            dialogText.text = enemyUnit.unitName + " attacks!";
-
-            yield return new WaitForSeconds(timeToNextTurn);
-
-            bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
-
-            playerHUD.SetHP(playerUnit.currentHP);
-
-            yield return new WaitForSeconds(timeToNextTurn);
-
-            if(isDead)
-            {
-                state = BattleState.LOST;
-                EndBattle();
-            }
-            else
-            {
-                state = BattleState.PLAYERTURN;
-                PlayerTurn();
-            }
-
+            state = BattleState.LOST;
+            EndBattle();
+        }
+        else
+        {
+            state = BattleState.PLAYERTURN;
+            PlayerTurn();
         }
 
-        void EndBattle()
-        {
-            if(state == BattleState.WON)
-            {
-                dialogText.text = "You Won!";
-            }
-            else if (state == BattleState.LOST)
-            {
-                dialogText.text = "You lost...";
-            }
-        }
+    }
 
-    
+    void EndBattle()
+    {
+        if (state == BattleState.WON)
+        {
+            dialogText.text = "You Won!";
+        }
+        else if (state == BattleState.LOST)
+        {
+            dialogText.text = "You lost...";
+        }
+    }
+
+
 
     void PlayerTurn()
     {
-        dialogText.text = "Choose an action:";         
+        dialogText.text = "Choose an action:";
     }
 
     IEnumerator PlayerHeal()
@@ -122,6 +124,8 @@ public class battlesystem : MonoBehaviour
 
         playerHUD.SetHP(playerUnit.currentHP);
         dialogText.text = "You feel renewed strength!";
+
+        state = BattleState.PLAYERACTION;
 
         yield return new WaitForSeconds(2f);
 
@@ -134,7 +138,7 @@ public class battlesystem : MonoBehaviour
         if (state != BattleState.PLAYERTURN)
             return;
 
-        StartCoroutine (PlayerAttack());
+        StartCoroutine(PlayerAttack());
 
 
     }
