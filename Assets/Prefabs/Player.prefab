@@ -92,6 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 742681277805088800}
   - component: {fileID: 742681277805088801}
+  - component: {fileID: 839873618}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -130,9 +131,27 @@ MonoBehaviour:
   unitName: Mad Furry
   unitLevel: 2
   damage: 10
-  heal: 5
   maxHP: 25
   currentHP: 20
+--- !u!95 &839873618
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742681277805088803}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8f1359fd8d27b414da6b1f6fdd766303, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1728766242606170291
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,8 +580,8 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 0}
   m_Animations:
-  - {fileID: 7400000, guid: a178f11633d9d564c91c9d9d559f8b7c, type: 2}
-  - {fileID: 7400000, guid: 7ad80141177f8954a85977992d0aa4e6, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
