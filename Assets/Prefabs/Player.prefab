@@ -131,6 +131,7 @@ MonoBehaviour:
   unitName: Mad Furry
   unitLevel: 2
   damage: 10
+  anim: {fileID: 839873618}
   maxHP: 25
   currentHP: 20
 --- !u!95 &839873618

@@ -8,6 +8,7 @@ public class unit : MonoBehaviour
     public string unitLevel;
 
     public int damage;
+    public Animator anim;
 
     public int maxHP;
     public int currentHP;
@@ -20,6 +21,7 @@ public class unit : MonoBehaviour
             return true;
         else
             return false;
+
     }
 
     public void Heal(int amount)
