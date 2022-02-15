@@ -61,6 +61,9 @@ public class battlesystem : MonoBehaviour
         enemyHUD.SetHP(enemyUnit.currentHP);
         dialogText.text = "You attacked!";
 
+        playerUnit.playerAttackAnim();
+        enemyUnit.playerDamageAnim();
+
         state = BattleState.PLAYERACTION;
         attackButton.SetActive(false);
         healButton.SetActive(false);
@@ -88,6 +91,8 @@ public class battlesystem : MonoBehaviour
 
         bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
 
+        enemyUnit.playerAttackAnim();
+        playerUnit.playerDamageAnim();
 
         playerHUD.SetHP(playerUnit.currentHP);
 

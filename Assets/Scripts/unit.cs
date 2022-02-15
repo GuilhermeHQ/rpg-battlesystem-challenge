@@ -24,6 +24,16 @@ public class unit : MonoBehaviour
 
     }
 
+    public void playerAttackAnim ()
+    {
+        anim.SetTrigger("PlayerAttack");
+    }
+
+    public void playerDamageAnim()
+    {
+        anim.SetTrigger("PlayerDamage");
+    }
+
     public void Heal(int amount)
     {
         currentHP += amount;

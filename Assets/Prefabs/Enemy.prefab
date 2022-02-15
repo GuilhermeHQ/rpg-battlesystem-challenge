@@ -923,6 +923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7531512617640401468}
   - component: {fileID: 7531512617640401469}
+  - component: {fileID: -3517747614835555568}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -961,8 +962,28 @@ MonoBehaviour:
   unitName: Angry Caio
   unitLevel: 2
   damage: 5
+  anim: {fileID: -3517747614835555568}
   maxHP: 30
   currentHP: 30
+--- !u!95 &-3517747614835555568
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7531512617640401471}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8f1359fd8d27b414da6b1f6fdd766303, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7643857893883732839
 GameObject:
   m_ObjectHideFlags: 0
