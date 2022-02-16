@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd8b2bd1c5bb874f8e67349292ee123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Mad Furry
+  unitName: Me
   unitLevel: 2
   damage: 10
   anim: {fileID: 839873618}
