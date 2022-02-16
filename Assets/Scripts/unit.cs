@@ -24,14 +24,14 @@ public class unit : MonoBehaviour
 
     }
 
-    public void playerAttackAnim ()
+    public void AttackAnim ()
     {
-        anim.SetTrigger("PlayerAttack");
+        anim.SetTrigger("Attack");
     }
 
-    public void playerDamageAnim()
+    public void DamageAnim()
     {
-        anim.SetTrigger("PlayerDamage");
+        anim.SetTrigger("Damage");
     }
 
     public void Heal(int amount)
