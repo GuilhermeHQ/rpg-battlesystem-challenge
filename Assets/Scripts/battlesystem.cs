@@ -56,17 +56,22 @@ public class battlesystem : MonoBehaviour
     }
 
     IEnumerator PlayerAttack()
-    {       
+    {
+        attackButton.SetActive(false);
+        healButton.SetActive(false);
+
+        playerUnit.AttackAnim();
+        yield return new WaitForSeconds(1f);
+
+        enemyUnit.DamageAnim();
+        yield return new WaitForSeconds(1f);
+
         bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
         enemyHUD.SetHP(enemyUnit.currentHP);
         dialogText.text = "You attacked!";
 
-        playerUnit.AttackAnim();
-        enemyUnit.DamageAnim();
-
         state = BattleState.PLAYERACTION;
-        attackButton.SetActive(false);
-        healButton.SetActive(false);
+
 
         yield return new WaitForSeconds(timeToNextTurn);
 
@@ -85,15 +90,16 @@ public class battlesystem : MonoBehaviour
 
     IEnumerator EnemyTurn()
     {
-        dialogText.text = enemyUnit.unitName + " attacks!";
+        enemyUnit.AttackAnim();
+        yield return new WaitForSeconds(1f);
 
+        playerUnit.DamageAnim();
+        yield return new WaitForSeconds(1f);
+
+        dialogText.text = enemyUnit.unitName + " attacks!";
         yield return new WaitForSeconds(timeToNextTurn);
 
         bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
-
-        enemyUnit.AttackAnim();
-        playerUnit.DamageAnim();
-
         playerHUD.SetHP(playerUnit.currentHP);
 
         yield return new WaitForSeconds(timeToNextTurn);
